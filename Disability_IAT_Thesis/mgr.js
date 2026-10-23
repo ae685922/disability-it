@@ -14,19 +14,13 @@ define(['managerAPI',
     API.setName('mgr');
     API.addSettings('skip',true);
 
-    //Randomly select which of two sets of category labels to use.
-    let raceSet = API.shuffle(['a','b'])[0];
-    let blackLabels = [];
-    let whiteLabels = [];
-
-    if (raceSet == 'a') {
-        blackLabels.push('African Americans');
-        whiteLabels.push('European Americans');
-    } else {
-        blackLabels.push('Black people');
-        whiteLabels.push('White people');
-    }
-
+   
+   
+    // Disability Attitudes IAT category labels
+    let raceSet = 'disability';
+    let blackLabels = ['Disabled'];
+    let whiteLabels = ['Abled'];
+	
     API.addGlobal({
         raceiat:{},
         //YBYB: change when copying back to the correct folder
